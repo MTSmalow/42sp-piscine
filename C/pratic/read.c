@@ -1,30 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_is_negative.c                                   :+:      :+:    :+:   */
+/*   read.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: edmedeir <edmedeir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/02/26 14:19:57 by edmedeir          #+#    #+#             */
-/*   Updated: 2026/02/28 12:09:01 by edmedeir         ###   ########.fr       */
+/*   Created: 2026/02/28 10:09:36 by edmedeir          #+#    #+#             */
+/*   Updated: 2026/02/28 11:50:20 by edmedeir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include	<unistd.h>
+#define BUFFER_SIZE	1024
 
-void	ft_is_negative(int n)
+int	main(void)
 {
-	char	positivo;
-	char	negativo;
+	char	buffer[BUFFER_SIZE];
+	ssize_t	bytes_lidos;
 
-	positivo = 'p';
-	negativo = 'n';
-	if (n >= 0)
-		write(1, &positivo, 1);
-	write(1, &negativo, 1);
-}
+	bytes_lidos = read(STDIN_FILENO, buffer, BUFFER_SIZE);
 
-int	main(void){
-  ft_is_negative(10);
-  return(0);
+	if (bytes_lidos > 0)
+	{
+		if (buffer[BUFFER_SIZE] == '\n')
+		{
+			buffer[BUFFER_SIZE] = '\0';
+		}
+		else
+		{
+			buffer[bytes_lidos] = '\0';
+		}
+	}
+
+	write(1, buffer, bytes_lidos);
 }
