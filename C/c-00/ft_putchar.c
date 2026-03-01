@@ -6,7 +6,7 @@
 /*   By: edmedeir <edmedeir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/26 10:56:44 by edmedeir          #+#    #+#             */
-/*   Updated: 2026/02/28 13:29:55 by edmedeir         ###   ########.fr       */
+/*   Updated: 2026/03/01 16:52:59 by edmedeir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,8 @@ char	ft_putchar(char c)
 	write(1, &c, 1);
 }
 
-int	main(void)
-{
-	ft_putchar('X');
-	return (0);
-}
+// int	main(void)
+// {
+// 	ft_putchar('X');
+// 	return (0);
+// }

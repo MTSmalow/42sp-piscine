@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: edmedeir <edmedeir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/02/26 14:19:57 by edmedeir          #+#    #+#             */
-/*   Updated: 2026/02/28 12:09:01 by edmedeir         ###   ########.fr       */
+/*   Created: 2026/03/01 16:49:37 by edmedeir          #+#    #+#             */
+/*   Updated: 2026/03/01 17:59:42 by edmedeir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,11 +20,14 @@ void	ft_is_negative(int n)
 	positivo = 'p';
 	negativo = 'n';
 	if (n >= 0)
+	{
 		write(1, &positivo, 1);
-	write(1, &negativo, 1);
+		write(1, &negativo, 1);
+	}
 }
 
-int	main(void){
-  ft_is_negative(10);
-  return(0);
-}
+// int	main(void)
+// {
+// 	ft_is_negative(10);
+// 	return (0);
+// }
