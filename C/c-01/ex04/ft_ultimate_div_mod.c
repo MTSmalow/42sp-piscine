@@ -1,33 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_is_negative.c                                   :+:      :+:    :+:   */
+/*   ft_ultimate_div_mod.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: edmedeir <edmedeir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/03/01 16:49:37 by edmedeir          #+#    #+#             */
-/*   Updated: 2026/03/01 17:59:42 by edmedeir         ###   ########.fr       */
+/*   Created: 2026/03/02 16:33:20 by edmedeir          #+#    #+#             */
+/*   Updated: 2026/03/02 16:42:44 by edmedeir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+// #include<stdio.h>
 
-void	ft_is_negative(int n)
+void	ft_ultimate_div_mod(int *a, int *b)
 {
-	char	positivo;
-	char	negativo;
+	int	div;
 
-	positivo = 'p';
-	negativo = 'n';
-	if (n >= 0)
-	{
-		write(1, &positivo, 1);
-		write(1, &negativo, 1);
-	}
+	div = *a / *b;
+	*b = *a % *b;
+	*a = div;
 }
 
 // int	main(void)
 // {
-// 	ft_is_negative(10);
-// 	return (0);
+// 	int	a;
+// 	int	b;
+
+// 	a = 23;
+// 	b = 10;
+// 	printf("valor de a: %d\n", a);
+// 	printf("valor de b: %d\n", b);
+// 	ft_ultimate_div_mod(&a, &b);
+// 	printf("valor de div: %d\n", a);
+// 	printf("valor de mod: %d\n", b);
 // }

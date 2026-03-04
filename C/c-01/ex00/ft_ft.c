@@ -1,24 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar.c                                       :+:      :+:    :+:   */
+/*   ft_ft.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: edmedeir <edmedeir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/02/26 10:56:44 by edmedeir          #+#    #+#             */
-/*   Updated: 2026/03/01 16:52:59 by edmedeir         ###   ########.fr       */
+/*   Created: 2026/02/27 14:22:57 by edmedeir          #+#    #+#             */
+/*   Updated: 2026/03/02 11:02:16 by edmedeir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+// #include<stdio.h>
 
-char	ft_putchar(char c)
+void	ft_ft(int *nbr)
 {
-	write(1, &c, 1);
+	*nbr = 42;
 }
 
 // int	main(void)
 // {
-// 	ft_putchar('X');
-// 	return (0);
+// 	int	nbr;
+
+// 	ft_ft(&nbr);
+// 	printf("O valor é: %d\n", nbr);
 // }

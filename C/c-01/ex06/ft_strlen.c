@@ -1,16 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_ft.c                                            :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: edmedeir <edmedeir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/02/27 14:22:57 by edmedeir          #+#    #+#             */
-/*   Updated: 2026/02/27 14:48:34 by edmedeir         ###   ########.fr       */
+/*   Created: 2026/03/03 09:12:26 by edmedeir          #+#    #+#             */
+/*   Updated: 2026/03/04 15:00:59 by edmedeir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void ft_ft(int *nbr)
+// #include<unistd.h>
+
+int	ft_strlen(char *str)
 {
-	*nbr = '42';
+	int	i;
+
+	while (str[i])
+		i++;
+	return (i);
 }
+
+// int	main(int i)
+// {
+// 	int	tamanho;
+
+// 	tamanho = ft_strlen("oi");
+// 	printf("o numero de caracteres é %d\n", tamanho);
+// }

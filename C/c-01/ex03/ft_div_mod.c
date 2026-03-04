@@ -1,44 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_comb.c                                    :+:      :+:    :+:   */
+/*   ft_div_mod.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: edmedeir <edmedeir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/02/26 14:54:38 by edmedeir          #+#    #+#             */
-/*   Updated: 2026/03/01 17:59:52 by edmedeir         ###   ########.fr       */
+/*   Created: 2026/02/27 14:56:16 by edmedeir          #+#    #+#             */
+/*   Updated: 2026/03/02 16:42:52 by edmedeir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+// #include<stdio.h>
 
-void	ft_print_comb(void)
+void	ft_div_mod(int a, int b, int *div, int *mod)
 {
-	char	cent;
-	char	unid;
-	char	denc;
-
-	denc = 0;
-	cent = 0;
-	unid = 0;
-	while (cent < denc && denc < unid)
-	{
-		if (cent == '7' && denc == '8' && unid == '9')
-		{
-			break ;
-		}
-		else
-		{
-			write (1, &cent, 1);
-			write (1, &denc, 1);
-			write (1, &unid, 1);
-			write(1, ', ', 1);
-		}
-	}
+	*div = a / b;
+	*mod = a % b;
 }
 
-// int	main(void)
+// int main(void)
 // {
-// 	ft_print_comb();
-// 	return (0);
+// 	int a;
+// 	int b;
+// 	int div;
+// 	int mod;
+
+// 	a = 23;
+// 	b = 10;
+// 	ft_div_mod(a, b, &div, &mod);
+// 	printf("valor de a: %d\n", a);
+// 	printf("valor de b: %d\n", b);
+// 	printf("valor de div: %d\n", div);
+// 	printf("valor de mod: %d\n", mod);
 // }
