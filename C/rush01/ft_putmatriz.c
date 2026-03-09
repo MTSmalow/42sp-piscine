@@ -6,7 +6,7 @@
 /*   By: edmedeir <edmedeir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/07 10:57:34 by edmedeir          #+#    #+#             */
-/*   Updated: 2026/03/08 03:45:32 by edmedeir         ###   ########.fr       */
+/*   Updated: 2026/03/08 13:24:35 by edmedeir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,74 +14,59 @@
 
 void	ft_putmatriz(int matriz[4][4])
 {
-	int		contl;
-	int		contc;
+	int		i;
+	int		j;
 	char	c;
 
-	contl = 0;
-	while (contl < 4)
+	i = -1;
+	while (++i < 4)
 	{
-		contc = 0;
-		while (contc < 4)
+		j = -1;
+		while (++j < 4)
 		{
-			c = matriz[contl][contc] + '0';
+			c = matriz[i][j] + '0';
 			write(1, &c, 1);
-			write(1, " ", 1);
-			contc++;
+			if (j < 3)
+				write(1, " ", 1);
 		}
-		write(1, "\n", 2);
-		contl++;
+		write(1, "\n", 1);
 	}
 }
 
-int	ft_put(int matriz[4][4], int line, int col, int num)
+int	is_safe(int matriz[4][4], int row, int col, int num)
 {
-	int	cont;
+	int	i;
 
-	cont = 0;
-	while (cont < 4)
+	i = 0;
+	while (i < 4)
 	{
-		if (matriz[line][cont] == num || matriz[cont][col] == num)
+		if (matriz[row][i] == num || matriz[i][col] == num)
 			return (0);
-		cont++;
+		i++;
 	}
-	return (cont);
+	return (1);
 }
 
-int	resolve(int matriz[4][4], int line, int col)
+int	solve(int matriz[4][4], int constraints[16], int pos)
 {
+	int	row;
+	int	col;
 	int	num;
 
-	if (line == 4)
+	if (pos == 16)
 		return (1);
-
-	if (col == 4)
-		return (resolve(matriz, line + 1, 0));
-
-	num = 1;
-	while (num <= 4)
+	row = pos / 4;
+	col = pos % 4;
+	num = 0;
+	while (++num <= 4)
 	{
-		if (ft_put(matriz, line, col, num))
+		if (is_safe(matriz, row, col, num))
 		{
-			matriz[line][col] = num;
-
-			if (resolve(matriz, line, col + 1))
+			matriz[row][col] = num;
+			if (solve(matriz, constraints, pos + 1))
 				return (1);
-
-			matriz[line][col] = 0;
+			matriz[row][col] = 0;
 		}
-		num++;
 	}
 	return (0);
 }
-
-int	main(void)
-{
-	int	matriz[4][4] = {0};
-
-	if (resolve(matriz, 0, 0))
-		ft_putmatriz(matriz);
-	else
-		return (1);
-}
-

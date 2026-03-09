@@ -1,0 +1,77 @@
+matriz[lines][coluns]
+
+bool resolver_skyscraper(int tabuleiro[N][N], int dicas[16]) {
+    int linha, col;
+
+    // 1. Se não houver mais células vazias, o quebra-cabeça está resolvido!
+    if (!proxima_celula_vazia(tabuleiro, &linha, &col)) {
+        return true; 
+    }
+
+    // 2. Tentar números de 1 a N
+    for (int num = 1; num <= N; num++) {
+        // 3. Verificar se 'num' é seguro naquela posição
+        if (eh_valido(tabuleiro, linha, col, num, dicas)) {
+            tabuleiro[linha][col] = num;
+
+            // 4. Ir para o próximo passo
+            if (resolver_skyscraper(tabuleiro, dicas)) {
+                return true;
+            }
+
+            // 5. Se falhou lá na frente, desfazemos a escolha (Backtracking)
+            tabuleiro[linha][col] = 0;
+        }
+    }
+    return false; // Aciona o backtrack no nível anterior
+}
+	0  1  2   3
+0 1
+1
+2				f
+3 
+
+lines = 0;
+coluns = 0;
+matriz [0] = {0,1,2,3}
+matriz [0] [3] = 6
+matriz [1] = {1,2,3,0}
+
+while(matriz[l][c])
+{
+	while(colun < totalcolun)
+	{
+		coluns++;
+	}
+	coluns = 0;
+	l++;
+}
+
+um arquivo para verificação de cada numero
+
+	função para col top
+
+	função para row right
+
+	função col bottom
+
+	função row left
+
+uma função so para a escrita da matriz 
+
+1. A Regra do "1" (A Mais Poderosa)
+	O que é: Uma pista com o número 1 na borda significa que o 
+	primeiro prédio que você vê é o mais alto possível, bloqueando 
+	todos os outros.
+2. A Regra do "N" (Onde N é o tamanho da grade)
+	Lógica: A única maneira de ver todos os prédios é se eles 
+	estiverem em ordem crescente de altura a partir do ponto de 
+	vista da pista. Se a pista é "4" em uma grade 4x4, a fileira 
+	correspondente obrigatoriamente será [1, 2, 3, 4].
+
+uma função para checar se os numero digitados estao entre 1 e 4
+
+se o avaliador colocar dois parametros juntos com uma vigula entre eles
+o terminal considera um so token ai é culpa do terminal nao do codigo
+exemplo: ./a.out "teste","test"
+isso é propblema de tokenização

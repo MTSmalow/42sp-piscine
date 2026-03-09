@@ -6,7 +6,7 @@
 /*   By: edmedeir <edmedeir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/06 15:11:06 by edmedeir          #+#    #+#             */
-/*   Updated: 2026/03/06 18:16:17 by edmedeir         ###   ########.fr       */
+/*   Updated: 2026/03/09 09:39:00 by edmedeir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ int	ft_strcmp(char *s1, char *s2)
 // {
 // 	int	result;
 // 	char a[] = "Abelha";
-// 	char b[] = "Zebra";
+// 	char b[] = "Abelha";
 
 // 	result = ft_strcmp(&a, &b);
 // 	if (result > 0)
