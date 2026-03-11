@@ -1,37 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: edmedeir <edmedeir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/03/04 11:21:07 by edmedeir          #+#    #+#             */
-/*   Updated: 2026/03/05 10:20:06 by edmedeir         ###   ########.fr       */
+/*   Created: 2026/03/02 17:02:53 by edmedeir          #+#    #+#             */
+/*   Updated: 2026/03/10 16:11:57 by edmedeir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include<stdio.h>
-
-char	*ft_strcpy(char *dest, char *src)
+void	ft_putstr(char *str)
 {
-	int	index;
+	int	len;
 
-	if (!dest || !src)
-	{
-		return (0);
-	}
-	index = 0;
-	while (src[index])
-	{
-		dest[index] = src[index];
-		index++;
-	}
-	dest[index] = '\0';
-	return (dest);
+	len = 0;
+	while (str[len])
+		len++;
+	write(1, str, len);
 }
-// void main(void)
-// {
-// 	char arry[10];
+// #include<unistd.h>
 
-// 	printf(ft_strcpy(arry, "ola"));
+// int	main(void)
+// {
+// 	ft_putstr("teste");
 // }

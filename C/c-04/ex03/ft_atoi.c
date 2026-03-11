@@ -1,42 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_str_is_printable.c                              :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: edmedeir <edmedeir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/03/05 09:21:47 by edmedeir          #+#    #+#             */
-/*   Updated: 2026/03/05 09:33:29 by edmedeir         ###   ########.fr       */
+/*   Created: 2026/03/07 21:54:29 by edmedeir          #+#    #+#             */
+/*   Updated: 2026/03/10 16:11:10 by edmedeir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+int	ft_atoi(const char *str)
+{
+	int	res = 0;
+	int	sinal = 1;
+	int	i = 0;
+
+	while (str[i] == ' ' || (str[i] >= 9 && str[i] <= 13))
+		i++;
+	if (str[i] == '-')
+		sinal = -1;
+	while (str[i] == '-' || str[i] == '+')
+		i++;
+	while (str[i] >= '0' && str[i] <= '9')
+	{
+		res = res * 10 + (str[i] - '0');
+		i++;
+	}
+	return (res * sinal);
+}
 // #include<stdio.h>
 
-int	ft_str_is_printable(char *str)
-{
-	if (!str)
-	{
-		return (0);
-	}
-	if (*str == '\0')
-	{
-		return (0);
-	}
-	while (*str)
-	{
-		if (!(*str >= 0x20 && *str <= 0x7e))
-		{
-			return (0);
-		}
-		str++;
-	}
-	return (1);
-}
-
-// int	main(void)
+// int	main(int argc, char *argv[])
 // {
-// 	if (ft_str_is_printable("FGHfjhhffhhfhfhfhfhfhhfhfJ"))
-// 		printf("S");
-// 	else
-// 		printf("N");
+// 	printf("%d\n", ft_atoi(argv[1]));
 // }

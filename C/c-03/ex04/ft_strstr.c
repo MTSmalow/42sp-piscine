@@ -1,42 +1,49 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcat.c                                        :+:      :+:    :+:   */
+/*   ft_strstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: edmedeir <edmedeir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/03/06 18:17:02 by edmedeir          #+#    #+#             */
-/*   Updated: 2026/03/10 12:26:29 by edmedeir         ###   ########.fr       */
+/*   Created: 2026/03/06 18:44:36 by edmedeir          #+#    #+#             */
+/*   Updated: 2026/03/10 12:26:36 by edmedeir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strcat(char *dest, char *src)
+char	*ft_strstr(char *str, char *to_find)
 {
 	int	cont;
+	int	find;
 	int	cont2;
 
 	cont = 0;
+	find = 0;
 	cont2 = 0;
-	while (dest[cont] != '\0')
-		cont++;
-	while (src[cont2] != '\0')
+	while (to_find[find] != '\0')
+		find++;
+	while (str[cont] != '\0')
 	{
-		dest[cont] = src[cont2];
+		if (to_find[cont2] == str[cont])
+			cont2++;
+		else if (find == cont2)
+			return (1);
+		else
+			cont2 = 0;
 		cont++;
-		cont2++;
 	}
-	dest[cont] = '\0';
-	return (dest);
+	return (0);
 }
 
-// #include<stdio.h>
+// #include<unistd.h>
 
 // int	main(void)
 // {
-// 	char dest[50] = "ola, ";
-// 	char src[] = "mundo";
+// 	char str[] = "testeabteste";
 
-// 	ft_strcat(&dest, &src);
-
-// 	printf("%s\n", dest);
+// 	char to_find[] = "abc";
+// 	int result = ft_strstr(&str, &to_find);
+// 	if (result != 0)
+// 		write(1, "tem", 3);
+// 	else
+// 		write(1, "não tem", 8);
 // }

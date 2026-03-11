@@ -1,43 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strupcase.c                                     :+:      :+:    :+:   */
+/*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: edmedeir <edmedeir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/03/05 09:33:54 by edmedeir          #+#    #+#             */
-/*   Updated: 2026/03/05 10:15:38 by edmedeir         ###   ########.fr       */
+/*   Created: 2026/03/10 13:50:39 by edmedeir          #+#    #+#             */
+/*   Updated: 2026/03/10 16:11:41 by edmedeir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include<stdio.h>
-
-int	ft_lowercase(char c)
+void	ft_putnbr(int nb)
 {
-	if (c >= 'a' && c <= 'z')
-		return (1);
-	return (0);
-}
+	char	result;
 
-char	*ft_strupcase(char *str)
-{
-	int	i;
-
-	if (!str)
-		return (0);
-	i = 0;
-	while (str[i])
+	result = 0;
+	if (nb < 0)
 	{
-		if (ft_lowercase(str[i]))
-			str[i] = str[i] - 32;
-		i++;
+		write(1, '-', 1);
+		nb = nb * -1;
 	}
-	return (str);
+	if (nb > 9)
+		ft_putnbr(nb / 10);
+	result = nb % 10 + '0';
+	write(1, &result, 1);
 }
+//#include<unistd.h>
 
 // int	main(void)
 // {
-// 	char	srt[10] = "fffhdhdhdh";
-
-// 	printf(ft_strupcase(srt));
+// 	ft_putnbr(12);
 // }
