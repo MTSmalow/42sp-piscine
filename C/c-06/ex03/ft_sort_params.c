@@ -6,44 +6,72 @@
 /*   By: edmedeir <edmedeir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/12 13:35:22 by edmedeir          #+#    #+#             */
-/*   Updated: 2026/03/12 13:57:26 by edmedeir         ###   ########.fr       */
+/*   Updated: 2026/03/12 17:21:50 by edmedeir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_print_params(int *srt, char	*constrais[])
-{
-	int		cont;
-	int		cont2;
-	char	*name;
+#include <unistd.h>
 
-	cont = 1;
-	cont2 = 0;
-	while (cont < srt)
+void	ft_putstr(char *str)
+{
+	int	i;
+
+	i = 0;
+	while (str[i])
 	{
-		name = constrais[cont];
-		while (constrais[cont][cont2])
-			cont2++;
-		write(1, name, cont2);
-		write(1, "\n", 1);
-		cont2 = 0;
-		cont++;
+		write(1, &str[i], 1);
+		i++;
+	}
+	write(1, "\n", 1);
+}
+
+int	ft_strcmp(char *s1, char *s2)
+{
+	int	i;
+
+	i = 0;
+	while (s1[i] && s2[i] && s1[i] == s2[i])
+		i++;
+	return (s1[i] - s2[i]);
+}
+
+void	ft_sort_params(int argc, char **argv)
+{
+	int		i;
+	int		j;
+	char	*temp;
+
+	i = 1;
+	while (i < argc - 1)
+	{
+		j = i + 1;
+		while (j < argc)
+		{
+			if (ft_strcmp(argv[i], argv[j]) > 0)
+			{
+				temp = argv[i];
+				argv[i] = argv[j];
+				argv[j] = temp;
+			}
+			j++;
+		}
+		i++;
 	}
 }
 
-char	ft_sort_params(int *srt, char	*constrais[])
+int	main(int argc, char **argv)
 {
-	int	cont;
-	int	params1;
-	int	params2;
-	int	value;
+	int	i;
 
-	cont = 0;
-	while (constrais[cont] || constrais[cont + 1])
+	if (argc > 1)
 	{
-		
+		ft_sort_params(argc, argv);
+		i = 1;
+		while (i < argc)
+		{
+			ft_putstr(argv[i]);
+			i++;
+		}
 	}
-}
-
-int	main(int argc, char *argv[])
-{
+	return (0);
 }

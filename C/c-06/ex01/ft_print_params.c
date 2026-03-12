@@ -6,9 +6,11 @@
 /*   By: edmedeir <edmedeir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/12 12:34:45 by edmedeir          #+#    #+#             */
-/*   Updated: 2026/03/12 12:49:53 by edmedeir         ###   ########.fr       */
+/*   Updated: 2026/03/12 15:36:39 by edmedeir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include<unistd.h>
 
 int	main(int argc, char *argv[])
 {

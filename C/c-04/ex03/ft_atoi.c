@@ -6,7 +6,7 @@
 /*   By: edmedeir <edmedeir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/07 21:54:29 by edmedeir          #+#    #+#             */
-/*   Updated: 2026/03/11 15:39:31 by edmedeir         ###   ########.fr       */
+/*   Updated: 2026/03/12 17:21:28 by edmedeir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,9 @@ int	ft_atoi(char *str)
 	int	si = 1;
 	int	i = 0;
 
+	res = 0;
+	si = 1;
+	i = 0;
 	while (str[i] == ' ' || (str[i] >= 9 && str[i] <= 13))
 		i++;
 	if (str[i] == '-')
