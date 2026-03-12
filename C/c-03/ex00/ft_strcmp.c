@@ -6,7 +6,7 @@
 /*   By: edmedeir <edmedeir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/06 15:11:06 by edmedeir          #+#    #+#             */
-/*   Updated: 2026/03/10 12:26:02 by edmedeir         ###   ########.fr       */
+/*   Updated: 2026/03/12 15:06:31 by edmedeir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@ int	ft_strcmp(char *s1, char *s2)
 	int	cont;
 
 	cont = 0;
-	while (s1[cont] != '\0' && s2[cont] != '\0')
+	while (s1[cont] || s2[cont])
 	{
 		if (!(s1[cont] == s2[cont]))
 			return (s1[cont] - s2[cont]);
@@ -30,7 +30,7 @@ int	ft_strcmp(char *s1, char *s2)
 // {
 // 	int	result;
 // 	char a[] = "Abelha";
-// 	char b[] = "Abelha";
+// 	char b[] = "Abelhaaaa";
 
 // 	result = ft_strcmp(&a, &b);
 // 	if (result > 0)
