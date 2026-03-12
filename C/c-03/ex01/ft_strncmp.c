@@ -6,13 +6,13 @@
 /*   By: edmedeir <edmedeir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/06 17:53:04 by edmedeir          #+#    #+#             */
-/*   Updated: 2026/03/10 12:26:23 by edmedeir         ###   ########.fr       */
+/*   Updated: 2026/03/11 18:10:27 by edmedeir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_strncmp(char *s1, char *s2, unsigned int n)
 {
-	int	cont;
+	unsigned int	cont;
 
 	cont = 0;
 	while (s1[cont] != '\0' && s2[cont] != '\0' && cont < n)
@@ -28,10 +28,10 @@ int	ft_strncmp(char *s1, char *s2, unsigned int n)
 // int	main(void)
 // {
 // 	int	result;
-// 	char a[] = "tebtd";
+// 	char a[] = "teetd";
 // 	char b[] = "teate";
 
-// 	result = ft_strncmp(&a, &b , 3);
+// 	result = ft_strncmp(a, b , 3);
 // 	if (result > 0)
 // 		printf("positivo\n");
 // 	else if (result < 0)

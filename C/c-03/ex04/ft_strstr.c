@@ -6,7 +6,7 @@
 /*   By: edmedeir <edmedeir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/06 18:44:36 by edmedeir          #+#    #+#             */
-/*   Updated: 2026/03/10 12:26:36 by edmedeir         ###   ########.fr       */
+/*   Updated: 2026/03/11 18:07:35 by edmedeir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ char	*ft_strstr(char *str, char *to_find)
 		if (to_find[cont2] == str[cont])
 			cont2++;
 		else if (find == cont2)
-			return (1);
+			return (to_find);
 		else
 			cont2 = 0;
 		cont++;
@@ -38,12 +38,9 @@ char	*ft_strstr(char *str, char *to_find)
 
 // int	main(void)
 // {
-// 	char str[] = "testeabteste";
+// 	char str[] = "testeabcteste";
 
 // 	char to_find[] = "abc";
-// 	int result = ft_strstr(&str, &to_find);
-// 	if (result != 0)
-// 		write(1, "tem", 3);
-// 	else
-// 		write(1, "não tem", 8);
+// 	char *result = ft_strstr(&str, &to_find);
+// 	printf("%s\n", result);
 // }

@@ -1,37 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_iterative_power.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: edmedeir <edmedeir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/03/07 21:54:29 by edmedeir          #+#    #+#             */
-/*   Updated: 2026/03/11 15:39:31 by edmedeir         ###   ########.fr       */
+/*   Created: 2026/03/11 19:26:07 by edmedeir          #+#    #+#             */
+/*   Updated: 2026/03/11 19:41:07 by edmedeir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_atoi(char *str)
+int	ft_iterative_power(int nb, int power)
 {
-	int	res = 0;
-	int	si = 1;
-	int	i = 0;
+	int	result;
 
-	while (str[i] == ' ' || (str[i] >= 9 && str[i] <= 13))
-		i++;
-	if (str[i] == '-')
-		si = -1;
-	while (str[i] == '-' || str[i] == '+')
-		i++;
-	while (str[i] >= '0' && str[i] <= '9')
+	result = 0;
+	if (power == 0 && nb == 0)
+		return (1);
+	if (power < 0)
+		return (0);
+	while (power > 0)
 	{
-		res = res * 10 + (str[i] - '0');
-		i++;
+		result += nb * nb;
+		power--;
 	}
-	return (res * si);
+	return (result);
 }
-// #include<stdio.h>
 
-// int	main(int argc, char *argv[])
-// {
-// 	printf("%d\n", ft_atoi(argv[1]));
-// }
+int	main(void)
+{
+	printf("%d\n", ft_iterative_power(10, 10));
+}

@@ -6,14 +6,14 @@
 /*   By: edmedeir <edmedeir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/06 18:37:27 by edmedeir          #+#    #+#             */
-/*   Updated: 2026/03/10 14:37:15 by edmedeir         ###   ########.fr       */
+/*   Updated: 2026/03/11 18:13:01 by edmedeir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 char	*ft_strncat(char *dest, char *src, unsigned int nb)
 {
-	int	cont;
-	int	cont2;
+	unsigned int	cont;
+	unsigned int	cont2;
 
 	cont = 0;
 	cont2 = 0;
@@ -36,7 +36,7 @@ char	*ft_strncat(char *dest, char *src, unsigned int nb)
 // 	char dest[50] = "ola, ";
 // 	char src[] = "mundo";
 
-// 	ft_strncat(&dest, &src, 2);
+// 	ft_strncat(dest, src, 2);
 
 // 	printf("%s\n", dest);
 // }

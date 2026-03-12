@@ -6,7 +6,7 @@
 /*   By: edmedeir <edmedeir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/10 09:28:38 by edmedeir          #+#    #+#             */
-/*   Updated: 2026/03/10 15:31:58 by edmedeir         ###   ########.fr       */
+/*   Updated: 2026/03/11 11:43:44 by edmedeir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
 	dest[d_len + i] = '\0';
 	return (d_len + s_len);
 }
-//#include<stdio.h>
+// #include<stdio.h>
 
 // int main(void)
 // {
