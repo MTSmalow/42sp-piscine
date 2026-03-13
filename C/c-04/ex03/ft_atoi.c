@@ -6,15 +6,15 @@
 /*   By: edmedeir <edmedeir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/07 21:54:29 by edmedeir          #+#    #+#             */
-/*   Updated: 2026/03/12 17:21:28 by edmedeir         ###   ########.fr       */
+/*   Updated: 2026/03/13 16:32:05 by edmedeir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_atoi(char *str)
 {
-	int	res = 0;
-	int	si = 1;
-	int	i = 0;
+	int	res;
+	int	si;
+	int	i;
 
 	res = 0;
 	si = 1;
@@ -32,9 +32,10 @@ int	ft_atoi(char *str)
 	}
 	return (res * si);
 }
-// #include<stdio.h>
+// #include <stdio.h>
 
 // int	main(int argc, char *argv[])
 // {
-// 	printf("%d\n", ft_atoi(argv[1]));
+// 	if (argc == 2)
+// 		printf("%d\n", ft_atoi(argv[1]));
 // }

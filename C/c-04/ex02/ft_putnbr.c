@@ -6,9 +6,11 @@
 /*   By: edmedeir <edmedeir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/10 13:50:39 by edmedeir          #+#    #+#             */
-/*   Updated: 2026/03/10 16:11:41 by edmedeir         ###   ########.fr       */
+/*   Updated: 2026/03/13 16:28:31 by edmedeir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include<unistd.h>
 
 void	ft_putnbr(int nb)
 {
@@ -25,8 +27,6 @@ void	ft_putnbr(int nb)
 	result = nb % 10 + '0';
 	write(1, &result, 1);
 }
-//#include<unistd.h>
-
 // int	main(void)
 // {
 // 	ft_putnbr(12);

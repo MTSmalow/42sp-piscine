@@ -6,9 +6,11 @@
 /*   By: edmedeir <edmedeir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/02 17:02:53 by edmedeir          #+#    #+#             */
-/*   Updated: 2026/03/10 16:11:57 by edmedeir         ###   ########.fr       */
+/*   Updated: 2026/03/13 16:28:15 by edmedeir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include<unistd.h>
 
 void	ft_putstr(char *str)
 {
@@ -19,7 +21,6 @@ void	ft_putstr(char *str)
 		len++;
 	write(1, str, len);
 }
-// #include<unistd.h>
 
 // int	main(void)
 // {
