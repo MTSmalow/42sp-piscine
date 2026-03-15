@@ -6,7 +6,7 @@
 /*   By: edmedeir <edmedeir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/10 13:50:39 by edmedeir          #+#    #+#             */
-/*   Updated: 2026/03/13 16:28:31 by edmedeir         ###   ########.fr       */
+/*   Updated: 2026/03/14 20:27:49 by edmedeir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	ft_putnbr(int nb)
 	result = 0;
 	if (nb < 0)
 	{
-		write(1, '-', 1);
+		write(1, "-", 1);
 		nb = nb * -1;
 	}
 	if (nb > 9)
