@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": false,
-      "cwd": "/home/edmedeir/42sp-repositorio/C",
-      "program": "/home/edmedeir/42sp-repositorio/C/build/Debug/outDebug",
+      "cwd": "/home/edmedeir/42sp-repositorio/C/c-04/intra-uuid-c0a49ae3-ee05-4a0c-b6c1-12e9d4e66126-7314352-edmedeir/ex03",
+      "program": "/home/edmedeir/42sp-repositorio/C/c-04/intra-uuid-c0a49ae3-ee05-4a0c-b6c1-12e9d4e66126-7314352-edmedeir/ex03/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [

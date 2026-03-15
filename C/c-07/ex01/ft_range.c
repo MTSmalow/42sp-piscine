@@ -1,25 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_program_name.c                            :+:      :+:    :+:   */
+/*   ft_range.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: edmedeir <edmedeir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/03/12 12:20:25 by edmedeir          #+#    #+#             */
-/*   Updated: 2026/03/12 12:34:22 by edmedeir         ###   ########.fr       */
+/*   Created: 2026/03/15 01:30:26 by edmedeir          #+#    #+#             */
+/*   Updated: 2026/03/15 03:51:10 by edmedeir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<unistd.h>
+#include<stdio.h>
+#include<stdlib.h>
 
-int	main(int argc, char *argv[])
+int	*ft_range(int min, int max)
 {
-	int		cont;
-	char	*name;
+	int	*ptr;
+	int	cont;
 
+	ptr = (int *)malloc (max - min);
 	cont = 0;
-	name = argv[0];
-	while (argv[0][cont])
+	while ((min + cont) <= max)
+	{
+		ptr[cont] = min + cont;
 		cont++;
-	write(1, name, cont);
+	}
+	return (ptr);
 }
+

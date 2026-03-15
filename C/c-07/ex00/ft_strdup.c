@@ -1,30 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: edmedeir <edmedeir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/03/03 09:12:26 by edmedeir          #+#    #+#             */
-/*   Updated: 2026/03/10 16:12:09 by edmedeir         ###   ########.fr       */
+/*   Created: 2026/03/15 00:56:15 by edmedeir          #+#    #+#             */
+/*   Updated: 2026/03/15 01:28:07 by edmedeir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(char *str)
+#include<stdlib.h>
+
+char	*ft_strdup(char *src)
 {
-	int	i;
+	int		cont;
+	char	*ptr;
 
-	i = 0;
-	while (str[i])
-		i++;
-	return (i);
+	cont = 0;
+	while (src[cont])
+		cont++;
+	ptr = (char *)malloc (cont);
+	cont = 0;
+	if (ptr != 0)
+	{
+		while (src[cont])
+		{
+			ptr[cont] = src[cont];
+			cont++;
+		}
+	}
+	return (ptr);
 }
-// #include<unistd.h>
 
-// int	main(int i)
+// #include<stdio.h>
+
+// int	main(void)
 // {
-// 	int	tamanho;
-
-// 	tamanho = ft_strlen("oi");
-// 	printf("o numero de caracteres é %d\n", tamanho);
+// 	printf("valor de return: %s\n", ft_strdup("teste"));
 // }

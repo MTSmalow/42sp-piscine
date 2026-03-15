@@ -1,28 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_print_program_name.c                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: edmedeir <edmedeir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/03/02 17:02:53 by edmedeir          #+#    #+#             */
-/*   Updated: 2026/03/13 16:28:15 by edmedeir         ###   ########.fr       */
+/*   Created: 2026/03/12 12:20:25 by edmedeir          #+#    #+#             */
+/*   Updated: 2026/03/15 10:21:04 by edmedeir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include<unistd.h>
 
-void	ft_putstr(char *str)
+int	main(int argc, char *argv[])
 {
-	int	len;
+	int		cont;
+	char	*name;
 
-	len = 0;
-	while (str[len])
-		len++;
-	write(1, str, len);
+	if (argc != 1)
+		return (0);
+	cont = 0;
+	name = argv[0];
+	while (argv[0][cont])
+		cont++;
+	write(1, name, cont);
+	return (0);
 }
-
-// int	main(void)
-// {
-// 	ft_putstr("teste");
-// }
