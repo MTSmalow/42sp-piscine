@@ -1,29 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_program_name.c                            :+:      :+:    :+:   */
+/*   ft_strncpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: edmedeir <edmedeir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/03/12 12:20:25 by edmedeir          #+#    #+#             */
-/*   Updated: 2026/03/17 11:05:08 by edmedeir         ###   ########.fr       */
+/*   Created: 2026/03/04 11:21:01 by edmedeir          #+#    #+#             */
+/*   Updated: 2026/03/09 11:04:31 by edmedeir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+// #include<stdio.h>
 
-int	main(int argc, char *argv[])
+char	*ft_strncpy(char *dest, char *src, unsigned int n)
 {
-	int		cont;
-	char	*name;
+	unsigned int	index;
 
-	if (argc != 1)
+	if (!dest || !src)
 		return (0);
-	cont = 0;
-	name = argv[0];
-	while (argv[0][cont])
-		cont++;
-	write(1, name, cont);
-	write(1, "\n", 1);
-	return (0);
+	index = 0;
+	while (src[index] && index < n)
+	{
+		dest[index] = src[index];
+		index++;
+	}
+	while (index < n)
+	{
+		dest[index] = '\0';
+		index++;
+	}
+	return (dest);
 }
+
+// int main(void)
+// {
+// 	char arry[10];
+
+// 	printf(ft_strncpy(arry, "ola", 3));
+// }

@@ -1,29 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_program_name.c                            :+:      :+:    :+:   */
+/*   ft_str_is_lowercase.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: edmedeir <edmedeir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/03/12 12:20:25 by edmedeir          #+#    #+#             */
-/*   Updated: 2026/03/17 11:05:08 by edmedeir         ###   ########.fr       */
+/*   Created: 2026/03/05 09:15:04 by edmedeir          #+#    #+#             */
+/*   Updated: 2026/03/11 09:58:55 by edmedeir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+// #include<stdio.h>
 
-int	main(int argc, char *argv[])
+int	ft_str_is_lowercase(char *str)
 {
-	int		cont;
-	char	*name;
-
-	if (argc != 1)
+	if (!str)
 		return (0);
-	cont = 0;
-	name = argv[0];
-	while (argv[0][cont])
-		cont++;
-	write(1, name, cont);
-	write(1, "\n", 1);
-	return (0);
+	if (*str == '\0')
+		return (1);
+	while (*str)
+	{
+		if (!(*str >= 'a' && *str <= 'z'))
+			return (0);
+		str++;
+	}
+	return (1);
 }
+
+// int	main(void)
+// {
+// 	if (ft_str_is_lowercase("teFte"))
+// 		printf("S");
+// 	else
+// 		printf("N");
+// }

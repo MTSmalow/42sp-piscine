@@ -1,29 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_program_name.c                            :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: edmedeir <edmedeir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/03/12 12:20:25 by edmedeir          #+#    #+#             */
-/*   Updated: 2026/03/17 11:05:08 by edmedeir         ###   ########.fr       */
+/*   Created: 2026/03/03 09:12:26 by edmedeir          #+#    #+#             */
+/*   Updated: 2026/03/10 16:12:09 by edmedeir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-int	main(int argc, char *argv[])
+int	ft_strlen(char *str)
 {
-	int		cont;
-	char	*name;
+	int	i;
 
-	if (argc != 1)
-		return (0);
-	cont = 0;
-	name = argv[0];
-	while (argv[0][cont])
-		cont++;
-	write(1, name, cont);
-	write(1, "\n", 1);
-	return (0);
+	i = 0;
+	while (str[i])
+		i++;
+	return (i);
 }
+// #include<unistd.h>
+
+// int	main(int i)
+// {
+// 	int	tamanho;
+
+// 	tamanho = ft_strlen("oi");
+// 	printf("o numero de caracteres é %d\n", tamanho);
+// }

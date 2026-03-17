@@ -1,29 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_program_name.c                            :+:      :+:    :+:   */
+/*   ft_strupcase.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: edmedeir <edmedeir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/03/12 12:20:25 by edmedeir          #+#    #+#             */
-/*   Updated: 2026/03/17 11:05:08 by edmedeir         ###   ########.fr       */
+/*   Created: 2026/03/05 09:33:54 by edmedeir          #+#    #+#             */
+/*   Updated: 2026/03/11 09:56:13 by edmedeir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+// #include<stdio.h>
 
-int	main(int argc, char *argv[])
+int	ft_lowercase(char c)
 {
-	int		cont;
-	char	*name;
-
-	if (argc != 1)
-		return (0);
-	cont = 0;
-	name = argv[0];
-	while (argv[0][cont])
-		cont++;
-	write(1, name, cont);
-	write(1, "\n", 1);
+	if (c >= 'a' && c <= 'z')
+		return (1);
 	return (0);
 }
+
+char	*ft_strupcase(char *str)
+{
+	int	i;
+
+	if (!str)
+		return (0);
+	i = 0;
+	while (str[i] != '\0')
+	{
+		if (ft_lowercase(str[i]))
+			str[i] = str[i] - 32;
+		i++;
+	}
+	return (str);
+}
+
+// int	main(void)
+// {
+// 	char	srt[10] = "fffhdhdhdh";
+
+// 	printf(ft_strupcase(srt));
+// }

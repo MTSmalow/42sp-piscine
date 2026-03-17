@@ -1,29 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_program_name.c                            :+:      :+:    :+:   */
+/*   ft_str_is_printable.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: edmedeir <edmedeir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/03/12 12:20:25 by edmedeir          #+#    #+#             */
-/*   Updated: 2026/03/17 11:05:08 by edmedeir         ###   ########.fr       */
+/*   Created: 2026/03/05 09:21:47 by edmedeir          #+#    #+#             */
+/*   Updated: 2026/03/14 12:03:19 by edmedeir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-int	main(int argc, char *argv[])
+int	ft_str_is_printable(char *str)
 {
-	int		cont;
-	char	*name;
+	int	i;
 
-	if (argc != 1)
-		return (0);
-	cont = 0;
-	name = argv[0];
-	while (argv[0][cont])
-		cont++;
-	write(1, name, cont);
-	write(1, "\n", 1);
-	return (0);
+	i = 0;
+	while (str[i] != '\0')
+	{
+		if (!(str[i] >= 32 && str[i] <= 126))
+			return (0);
+		i++;
+	}
+	return (1);
 }
+
+// #include<stdio.h>
+
+// int	main(void)
+// {
+// 	if (ft_str_is_printable("FGHfjhhffhhfhffhfhfhhfhfJ"))
+// 		printf("S");
+// 	else
+// 		printf("N");
+// }

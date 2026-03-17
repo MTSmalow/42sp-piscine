@@ -1,29 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_program_name.c                            :+:      :+:    :+:   */
+/*   ft_str_is_alpha.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: edmedeir <edmedeir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/03/12 12:20:25 by edmedeir          #+#    #+#             */
-/*   Updated: 2026/03/17 11:05:08 by edmedeir         ###   ########.fr       */
+/*   Created: 2026/03/04 11:11:28 by edmedeir          #+#    #+#             */
+/*   Updated: 2026/03/11 10:00:23 by edmedeir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-int	main(int argc, char *argv[])
+int	ft_str_is_alpha(char *str)
 {
-	int		cont;
-	char	*name;
-
-	if (argc != 1)
+	if (!str)
 		return (0);
-	cont = 0;
-	name = argv[0];
-	while (argv[0][cont])
-		cont++;
-	write(1, name, cont);
-	write(1, "\n", 1);
-	return (0);
+	if (*str == '\0')
+		return (1);
+	while (*str)
+	{
+		if (!((*str >= 'A' && *str <= 'Z') || (*str >= 'a' && *str <= 'z')))
+			return (0);
+		str++;
+	}
+	return (1);
 }
+// #include<stdio.h>
+
+// int	main(void)
+// {
+// 	if (ft_str_is_alpha("teste"))
+// 		printf("S");
+// 	else
+// 		printf("N");
+// }

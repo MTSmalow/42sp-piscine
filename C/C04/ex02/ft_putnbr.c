@@ -1,29 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_program_name.c                            :+:      :+:    :+:   */
+/*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: edmedeir <edmedeir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/03/12 12:20:25 by edmedeir          #+#    #+#             */
-/*   Updated: 2026/03/17 11:05:08 by edmedeir         ###   ########.fr       */
+/*   Created: 2026/03/10 13:50:39 by edmedeir          #+#    #+#             */
+/*   Updated: 2026/03/15 09:48:22 by edmedeir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include<unistd.h>
 
-int	main(int argc, char *argv[])
+void	ft_putnbr(int nb)
 {
-	int		cont;
-	char	*name;
+	char	result;
 
-	if (argc != 1)
-		return (0);
-	cont = 0;
-	name = argv[0];
-	while (argv[0][cont])
-		cont++;
-	write(1, name, cont);
-	write(1, "\n", 1);
-	return (0);
+	if (nb < 0)
+	{
+		write(1, "-", 1);
+		if (nb == -2147483648)
+		{
+			write(1, "2147483648", 10);
+			return ;
+		}
+		nb = nb * -1;
+	}
+	if (nb > 9)
+		ft_putnbr(nb / 10);
+	result = nb % 10 + '0';
+	write(1, &result, 1);
 }
+// int	main(void)
+// {
+// 	ft_putnbr(-22);
+// }

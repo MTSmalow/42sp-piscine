@@ -1,30 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_range.c                                         :+:      :+:    :+:   */
+/*   ft_str_is_numeric.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: edmedeir <edmedeir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/03/15 01:30:26 by edmedeir          #+#    #+#             */
-/*   Updated: 2026/03/15 03:51:10 by edmedeir         ###   ########.fr       */
+/*   Created: 2026/03/04 15:52:34 by edmedeir          #+#    #+#             */
+/*   Updated: 2026/03/11 10:01:07 by edmedeir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<stdio.h>
-#include<stdlib.h>
-
-int	*ft_range(int min, int max)
+int	ft_str_is_numeric(char *str)
 {
-	int	*ptr;
-	int	cont;
-
-	ptr = (int *)malloc (max - min);
-	cont = 0;
-	while ((min + cont) <= max)
+	if (!str)
+		return (0);
+	if (*str == '\0')
+		return (1);
+	while (*str)
 	{
-		ptr[cont] = min + cont;
-		cont++;
+		if (!(*str >= '0' && *str <= '9'))
+			return (0);
+		str++;
 	}
-	return (ptr);
+	return (1);
 }
 
+// #include<stdio.h>
+// int	main(void)
+// {
+// 	if (ft_str_is_numeric("12s2"))
+// 		printf("S");
+// 	else
+// 		printf("N");
+// }

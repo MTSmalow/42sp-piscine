@@ -1,41 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: edmedeir <edmedeir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/03/15 00:56:15 by edmedeir          #+#    #+#             */
-/*   Updated: 2026/03/15 01:28:07 by edmedeir         ###   ########.fr       */
+/*   Created: 2026/03/02 17:02:53 by edmedeir          #+#    #+#             */
+/*   Updated: 2026/03/13 16:28:15 by edmedeir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<stdlib.h>
+#include<unistd.h>
 
-char	*ft_strdup(char *src)
+void	ft_putstr(char *str)
 {
-	int		cont;
-	char	*ptr;
+	int	len;
 
-	cont = 0;
-	while (src[cont])
-		cont++;
-	ptr = (char *)malloc (cont);
-	cont = 0;
-	if (ptr != 0)
-	{
-		while (src[cont])
-		{
-			ptr[cont] = src[cont];
-			cont++;
-		}
-	}
-	return (ptr);
+	len = 0;
+	while (str[len])
+		len++;
+	write(1, str, len);
 }
-
-// #include<stdio.h>
 
 // int	main(void)
 // {
-// 	printf("valor de return: %s\n", ft_strdup("teste"));
+// 	ft_putstr("teste");
 // }
