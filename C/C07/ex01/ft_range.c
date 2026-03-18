@@ -6,16 +6,18 @@
 /*   By: edmedeir <edmedeir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/15 01:30:26 by edmedeir          #+#    #+#             */
-/*   Updated: 2026/03/16 16:03:22 by edmedeir         ###   ########.fr       */
+/*   Updated: 2026/03/18 14:39:21 by edmedeir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include<stdlib.h>
 
 int	*ft_range(int min, int max)
 {
 	int	*ptr;
 	int	cont;
 
-	if (min >= max)
+	if (min >= max) 
 	{
 		ptr = 0;
 		return (ptr);
@@ -31,7 +33,7 @@ int	*ft_range(int min, int max)
 }
 
 // #include<stdio.h>
-// #include<stdlib.h>
+
 // int main (void)
 // {
 // 	ft_range(10,20);
