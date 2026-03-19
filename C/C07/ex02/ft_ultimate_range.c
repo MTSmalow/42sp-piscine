@@ -6,7 +6,7 @@
 /*   By: edmedeir <edmedeir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/16 16:06:55 by edmedeir          #+#    #+#             */
-/*   Updated: 2026/03/19 10:25:52 by edmedeir         ###   ########.fr       */
+/*   Updated: 2026/03/19 11:35:32 by edmedeir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 int	ft_ultimate_range(int **range, int min, int max)
 {
-	int	cont;
-	int	size;
+	int		cont;
+	long	size;
 
 	if (min >= max)
 	{
@@ -36,7 +36,6 @@ int	ft_ultimate_range(int **range, int min, int max)
 }
 
 // #include <stdio.h>
-// #include <stdlib.h>
 
 // int	main(void)
 // {
