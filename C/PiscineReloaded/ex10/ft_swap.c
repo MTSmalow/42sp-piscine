@@ -6,15 +6,13 @@
 /*   By: edmedeir <edmedeir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/12 13:24:51 by edmedeir          #+#    #+#             */
-/*   Updated: 2026/05/12 13:26:28 by edmedeir         ###   ########.fr       */
+/*   Updated: 2026/05/14 14:39:44 by edmedeir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-void ft_swap(int *a, int *b)
+void	ft_swap(int *a, int *b)
 {
-	int *swap;
+	int	*swap;
 
 	*swap = *a;
 	*a = *b;

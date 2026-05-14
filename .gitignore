@@ -54,5 +54,6 @@ dkms.conf
 # debug information files
 *.dwo
 .vscode
-.txt
+*.txt
 .sh
+C/PiscineReloaded/ex05/"/?$*'MaRViN'*$?/"

@@ -6,7 +6,7 @@
 /*   By: edmedeir <edmedeir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/12 15:55:42 by edmedeir          #+#    #+#             */
-/*   Updated: 2026/05/12 16:08:31 by edmedeir         ###   ########.fr       */
+/*   Updated: 2026/05/14 14:46:49 by edmedeir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,11 @@ int	ft_strcmp(char *s1, char *s2)
 	int	cont;
 
 	cont = 0;
-	while (s1[cont] == s2[cont])
+	while (s1[cont] || s2[cont])
+	{
+		if (!(s1[cont] == s2[cont]))
+			return (s1[cont] - s2[cont]);
 		cont++;
-	return (*s1 - *s2);
+	}
+	return (0);
 }

@@ -6,11 +6,11 @@
 /*   By: edmedeir <edmedeir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/12 11:30:35 by edmedeir          #+#    #+#             */
-/*   Updated: 2026/05/12 12:59:23 by edmedeir         ###   ########.fr       */
+/*   Updated: 2026/05/14 14:38:53 by edmedeir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+void	ft_putchar(char c);
 
 void	ft_print_numbers(void)
 {
@@ -21,13 +21,7 @@ void	ft_print_numbers(void)
 	while (num <= 9)
 	{
 		chnum = num + '0';
-		write(1, &chnum, 1);
+		ft_putchar(chnum);
 		num++;
 	}
-}
-
-int	main()
-{
-	ft_print_numbers();
-	return(0);
 }

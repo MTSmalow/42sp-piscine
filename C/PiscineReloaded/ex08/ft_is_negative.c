@@ -6,18 +6,18 @@
 /*   By: edmedeir <edmedeir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/12 13:09:13 by edmedeir          #+#    #+#             */
-/*   Updated: 2026/05/12 13:16:07 by edmedeir         ###   ########.fr       */
+/*   Updated: 2026/05/14 14:38:19 by edmedeir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+void	ft_putchar(char c);
 
 void	ft_is_negative(int n)
 {
 	if (n >= 0)
-		write(1, "P", 1);
+		ft_putchar('P');
 	else
-		write(1, "N", 1);
+		ft_putchar('N');
 }
 
 // int	main()

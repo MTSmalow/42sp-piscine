@@ -6,7 +6,7 @@
 /*   By: edmedeir <edmedeir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/12 08:35:09 by edmedeir          #+#    #+#             */
-/*   Updated: 2026/05/14 09:31:55 by edmedeir         ###   ########.fr       */
+/*   Updated: 2026/05/14 14:23:28 by edmedeir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@ int	ft_iterative_factorial(int nb)
 	int	result;
 
 	result = 1;
-	if (nb < 0 && nb > 12)
+	if (nb < 0 || nb > 12)
 		return (0);
 	while (nb > 0)
 	{

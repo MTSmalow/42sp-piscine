@@ -6,13 +6,13 @@
 /*   By: edmedeir <edmedeir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/12 08:35:26 by edmedeir          #+#    #+#             */
-/*   Updated: 2026/05/14 09:32:12 by edmedeir         ###   ########.fr       */
+/*   Updated: 2026/05/14 14:23:52 by edmedeir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_recursive_factorial(int nb)
 {
-	if (nb < 0 && nb > 12)
+	if (nb < 0 || nb > 12)
 		return (0);
 	if (nb == 0)
 		return (1);
