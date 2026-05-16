@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_swap.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: edmedeir <edmedeir@student.42.fr>          +#+  +:+       +#+        */
+/*   By: edmedeir <edmedeir@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/12 13:24:51 by edmedeir          #+#    #+#             */
-/*   Updated: 2026/05/14 14:39:44 by edmedeir         ###   ########.fr       */
+/*   Updated: 2026/05/16 15:21:25 by edmedeir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@ void	ft_swap(int *a, int *b)
 {
 	int	*swap;
 
-	*swap = *a;
+	swap = *a;
 	*a = *b;
-	*b = *swap;
+	*b = swap;
 }

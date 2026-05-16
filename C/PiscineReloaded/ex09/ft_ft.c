@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_ft.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: edmedeir <edmedeir@student.42.fr>          +#+  +:+       +#+        */
+/*   By: edmedeir <edmedeir@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/12 13:23:31 by edmedeir          #+#    #+#             */
-/*   Updated: 2026/05/14 14:09:48 by edmedeir         ###   ########.fr       */
+/*   Updated: 2026/05/16 15:20:42 by edmedeir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 void	ft_ft(int *nbr)
 {
-	nbr = 42;
+	*nbr = 42;
 }

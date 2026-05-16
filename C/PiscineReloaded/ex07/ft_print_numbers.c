@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_print_numbers.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: edmedeir <edmedeir@student.42.fr>          +#+  +:+       +#+        */
+/*   By: edmedeir <edmedeir@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/12 11:30:35 by edmedeir          #+#    #+#             */
-/*   Updated: 2026/05/14 14:38:53 by edmedeir         ###   ########.fr       */
+/*   Updated: 2026/05/16 15:32:30 by edmedeir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,13 @@ void	ft_putchar(char c);
 
 void	ft_print_numbers(void)
 {
-	int		num;
-	char	chnum;
+	char	num;
 
-	chnum = 0;
-	while (num <= 9)
+	num = '0';
+	while (num <= '9')
 	{
-		chnum = num + '0';
-		ft_putchar(chnum);
+		num = num + '0';
+		ft_putchar(num);
 		num++;
 	}
 }

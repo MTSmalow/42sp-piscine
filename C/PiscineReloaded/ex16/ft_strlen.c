@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: edmedeir <edmedeir@student.42.fr>          +#+  +:+       +#+        */
+/*   By: edmedeir <edmedeir@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/12 15:49:02 by edmedeir          #+#    #+#             */
-/*   Updated: 2026/05/12 15:52:57 by edmedeir         ###   ########.fr       */
+/*   Updated: 2026/05/16 15:25:10 by edmedeir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@ int	ft_strlen(char *str)
 {
 	int	cont;
 
+	cont = 0;
 	while (str[cont])
 		cont++;
 	return (cont);
